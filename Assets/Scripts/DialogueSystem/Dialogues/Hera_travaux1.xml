@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Dialogue>
+  <Nodes>
+    <DialogueNode>
+      <NodeID>0</NodeID>
+      <Text>Ah, tu es enfin là.</Text>
+      <Options>
+        <DialogueOption>
+          <Text>Zeus m'a dit que je pouvais t'aider à résoudre un problème ?</Text>
+          <DestinationNodeID>1</DestinationNodeID>
+        </DialogueOption>
+        <DialogueOption>
+          <Text>Je peux repartir si tu veux ...</Text>
+          <DestinationNodeID>2</DestinationNodeID>
+        </DialogueOption>
+      </Options>
+    </DialogueNode>
+    <DialogueNode>
+      <NodeID>1</NodeID>
+      <Text>Ouais il est tant pour toi d'être vraiment utile pour une fois</Text>
+      <Options>
+        <DialogueOption>
+          <Text>Sympa ...</Text>
+          <DestinationNodeID>3</DestinationNodeID>
+        </DialogueOption>
+      </Options>
+    </DialogueNode>
+    <DialogueNode>
+      <NodeID>2</NodeID>
+      <Text>Ne prend pas cet air avec moi, ou je vais m'énerver encore.</Text>
+      <Options>
+        <DialogueOption>
+          <Text>Pardon ...</Text>
+          <DestinationNodeID>3</DestinationNodeID>
+        </DialogueOption>
+      </Options>
+    </DialogueNode>
+    <DialogueNode>
+      <NodeID>3</NodeID>
+      <Text>Les habitants des villages aux alentours se sont plaint de nombreuses attaque dans la région. Apparemment une bête énorme rode dans le coin.</Text>
+      <Options>
+        <DialogueOption>
+          <Text>Quel genre de bête ?</Text>
+          <DestinationNodeID>4</DestinationNodeID>
+        </DialogueOption>
+        <DialogueOption>
+          <Text>Il y a des témoins ... encore vivant ?</Text>
+          <DestinationNodeID>4</DestinationNodeID>
+        </DialogueOption>
+      </Options>
+    </DialogueNode>
+    <DialogueNode>
+      <NodeID>4</NodeID>
+      <Text>Je ne sais pas, et c'est ton problème maintenant. Découvre ce qui ce cache ici, et butte le.</Text>
+      <Options>
+        <DialogueOption>
+          <Text>Je m'en charge.</Text>
+          <DestinationNodeID>5</DestinationNodeID>
+        </DialogueOption>
+        <DialogueOption>
+          <Text>Bon, j'imagine que je n'ai pas le choix ...</Text>
+          <DestinationNodeID>6</DestinationNodeID>
+        </DialogueOption>
+      </Options>
+    </DialogueNode>
+    <DialogueNode>
+      <NodeID>5</NodeID>
+      <Text>Bon courage, et fais attention à ne pas te faire dévorer. Ce serait si dommage ... niark niark niark</Text>
+      <Options>
+        <DialogueOption>
+          <Text>Exit</Text>
+          <DestinationNodeID>-1</DestinationNodeID>
+        </DialogueOption>
+      </Options>
+    </DialogueNode>
+    <DialogueNode>
+      <NodeID>6</NodeID>
+      <Text>Si tu veux une chance de te racheter, non en effet.</Text>
+      <Options>
+        <DialogueOption>
+          <Text>Bon ben c'est partis</Text>
+          <DestinationNodeID>5</DestinationNodeID>
+        </DialogueOption>
+      </Options>
+    </DialogueNode>
+  </Nodes>
+</Dialogue>

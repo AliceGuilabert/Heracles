@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Dialogue>
+  <Nodes>
+    <DialogueNode>
+      <NodeID>0</NodeID>
+      <Text>L'entrée de la grotte ! Je devrais récolter tout les indices sur la bête avant d'y rentrer.</Text>
+      <Options>
+        <DialogueOption>
+          <Text>Exit</Text>
+          <DestinationNodeID>-1</DestinationNodeID>
+        </DialogueOption>
+      </Options>
+    </DialogueNode>
+    <DialogueNode>
+      <NodeID>1</NodeID>
+      <Text>C'est surement la tanière de la bête. Il est temps d'y aller.</Text>
+      <Options>
+        <DialogueOption>
+          <Text>Exit</Text>
+          <DestinationNodeID>-1</DestinationNodeID>
+        </DialogueOption>
+      </Options>
+    </DialogueNode>
+    <DialogueNode>
+      <NodeID>2</NodeID>
+      <Text>Yerk, la chose qui a dévorée cette animal a l'air plutot féroce.</Text>
+      <Options>
+        <DialogueOption>
+          <Text>Exit</Text>
+          <DestinationNodeID>-1</DestinationNodeID>
+        </DialogueOption>
+      </Options>
+    </DialogueNode>
+    <DialogueNode>
+      <NodeID>3</NodeID>
+      <Text>Une touffe de poil est accrochée à ce buisson. C'est doré.</Text>
+      <Options>
+        <DialogueOption>
+          <Text>Exit</Text>
+          <DestinationNodeID>-1</DestinationNodeID>
+        </DialogueOption>
+      </Options>
+    </DialogueNode>
+    <DialogueNode>
+      <NodeID>4</NodeID>
+      <Text>Il y a quelque chose par terre. C'est une très grosse empreinte ... de félin ?</Text>
+      <Options>
+        <DialogueOption>
+          <Text>Exit</Text>
+          <DestinationNodeID>-1</DestinationNodeID>
+        </DialogueOption>
+      </Options>
+    </DialogueNode>
+    <DialogueNode>
+      <NodeID>5</NodeID>
+      <Text>ATTENTION
+      Ne pas entrer, risque de se faire dévorer vivant.</Text>
+      <Options>
+        <DialogueOption>
+          <Text>Exit</Text>
+          <DestinationNodeID>-1</DestinationNodeID>
+        </DialogueOption>
+      </Options>
+    </DialogueNode>
+  </Nodes>
+</Dialogue>
