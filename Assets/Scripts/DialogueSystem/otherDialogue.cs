@@ -40,6 +40,7 @@ public class otherDialogue : MonoBehaviour
 
     public void RunDialogue(int nodeStart)
     {
+        StopCoroutine("run");
         StartCoroutine(run(nodeStart));
     }
 
@@ -100,7 +101,8 @@ public class otherDialogue : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-               StartCoroutine(printText(node));
+                StopCoroutine("AnimateText");
+                StartCoroutine(printText(node));
                 yield break;
             }
             node_text.GetComponent<Text>().text += strComplete[i++];

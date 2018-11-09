@@ -5,7 +5,6 @@ using UnityEngine;
 public abstract class NPC : MonoBehaviour {
 
     public NPC_dialogue myDialog { get; set; }
-    protected int nbNodeDialogue;
     protected bool questActivated;
     protected bool questFinished;
     protected int nbProgress;
@@ -14,7 +13,6 @@ public abstract class NPC : MonoBehaviour {
     {
         questActivated = false;
         questFinished = false;
-        nbNodeDialogue = 0;
         nbProgress = 0;
     }
 
@@ -26,7 +24,6 @@ public abstract class NPC : MonoBehaviour {
     {
         if (collision.name.Equals("Player") && Input.GetKeyDown(KeyCode.RightShift) && !myDialog.onDialogue)
         {
-            //myDialog.RunDialogue(nbNodeDialogue);
             Interact();
         }
     }

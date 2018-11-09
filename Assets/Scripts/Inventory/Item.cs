@@ -28,6 +28,7 @@ public class Item : MonoBehaviour {
         }
     }
 
+    /*
     public void UseDestroy()
     {
         Debug.Log("Object utilisé !");
@@ -45,5 +46,5 @@ public class Item : MonoBehaviour {
         {
             Debug.Log("Je ne peux pas utiliser cet objet");
         }
-    }
+    }*/
 }

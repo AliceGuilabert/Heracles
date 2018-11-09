@@ -30,7 +30,7 @@ public class OnPickUp : MonoBehaviour
     {
         if (!picked)
         {
-            Debug.Log("Rentre");
+
             //Faire l'affichage
             foreach (Item item in objects)
             {
@@ -40,7 +40,7 @@ public class OnPickUp : MonoBehaviour
                 myInvent.Add(item);
 
             }
-            //picked = true;
+            picked = true;
         } else
         {
             //MESSAGE

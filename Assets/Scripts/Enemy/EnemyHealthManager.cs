@@ -8,7 +8,7 @@ public class EnemyHealthManager : MonoBehaviour {
     public string nameEnemy;
     public int maxEnemyHealth;
     private float enemyHealth;
-    public bool alive;
+    public bool alive { get; set; }
     private Animator myAnim;
 
     public Image healthBar;

@@ -34,21 +34,21 @@ public class LevelManager1 : MonoBehaviour {
         }   
     }
 
-    public void HandleInteraction(string nameItem)
+    public void HandleInteraction(bool firstTime, string nameItem)
     {
         switch(nameItem)
         {
             case ("Preuve1"):
                 mydialog.RunDialogue(2);
-                myLevel.InteractableGoal(items[0]);
+                if (firstTime) myLevel.InteractableGoal(items[0]);
                 break;
             case ("Preuve2"):
                 mydialog.RunDialogue(3);
-                myLevel.InteractableGoal(items[0]);
+                if (firstTime) myLevel.InteractableGoal(items[0]);
                 break;
             case ("Preuve3"):
                 mydialog.RunDialogue(4);
-                myLevel.InteractableGoal(items[0]);
+                if (firstTime) myLevel.InteractableGoal(items[0]);
                 break;
             case ("Panneau"):
                 mydialog.RunDialogue(5);
@@ -56,8 +56,4 @@ public class LevelManager1 : MonoBehaviour {
         }
     }
 
-    // Update is called once per frame
-    void Update () {
-		
-	}
 }

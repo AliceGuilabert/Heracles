@@ -131,6 +131,7 @@ public class NPC_dialogue : MonoBehaviour {
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                StopCoroutine("AnimateText");
                 StartCoroutine(printText(node));
                 yield break;
             }

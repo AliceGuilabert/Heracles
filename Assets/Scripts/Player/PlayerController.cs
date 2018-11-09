@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     private Animator myAnim;
 
     public Inventory myInvent;
-    public bool pause;
+    public bool pause { get; set; }
 
     private void Start()
     {
