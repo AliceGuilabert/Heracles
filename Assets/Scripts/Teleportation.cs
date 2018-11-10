@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class Teleportation : MonoBehaviour {
 
+    public bool enableOnStart;
+    private bool enable;
+
     public Vector2 teleportPosition;
     public GameObject previousBackground;
     public GameObject nextBackground;
@@ -15,19 +18,20 @@ public class Teleportation : MonoBehaviour {
     public Animator fadeAnimator;
 
     public Camera Camera;
-    private ParallaxBackground myCamera;
+    private CameraScript myCamera;
 
     public Vector2 minPositionCamera;
     public Vector2 maxPositionCamera;
 
     private void Start()
     {
-        myCamera = Camera.GetComponent<ParallaxBackground>();
+        myCamera = Camera.GetComponent<CameraScript>();
+        enable = enableOnStart;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.name.Equals("Player"))
+        if (collision.name.Equals("Player") && enable)
         {
             Debug.Log("telepoooortation");
             StartCoroutine(TeleportAnimation(collision.transform));
@@ -59,9 +63,8 @@ public class Teleportation : MonoBehaviour {
             nextBackground.SetActive(true);
         }
 
-        myCamera.minPositionX = minPositionCamera.x;
-        myCamera.maxPositionX = maxPositionCamera.x;
-        myCamera.minPositionY = minPositionCamera.y;
+        myCamera.MinPosition = minPositionCamera;
+        myCamera.MaxPosition = maxPositionCamera;
 
         fadeAnimator.SetBool("Fade", false);
         yield return new WaitUntil(() => fadeImage.color.a == 0);

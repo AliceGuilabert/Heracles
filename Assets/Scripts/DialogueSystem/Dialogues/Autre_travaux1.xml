@@ -62,5 +62,29 @@
         </DialogueOption>
       </Options>
     </DialogueNode>
+    <DialogueNode>
+      <NodeID>6</NodeID>
+      <Text>DERNIER AVERTISSEMENT
+        Faites demi-tour !!!
+      </Text>
+      <Options>
+        <DialogueOption>
+          <Text>Exit</Text>
+          <DestinationNodeID>-1</DestinationNodeID>
+        </DialogueOption>
+      </Options>
+    </DialogueNode>
+    <DialogueNode>
+      <NodeID>7</NodeID>
+      <Text>Wooooow.
+Okey, pas de gestes brusque, il s'agit de faire demi-tour lentement ...
+      </Text>
+      <Options>
+        <DialogueOption>
+          <Text>Exit</Text>
+          <DestinationNodeID>-1</DestinationNodeID>
+        </DialogueOption>
+      </Options>
+    </DialogueNode>
   </Nodes>
 </Dialogue>

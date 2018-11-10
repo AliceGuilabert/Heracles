@@ -38,10 +38,10 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        myAnim.SetBool("OnTheGround", onTheGround);
+
         if (!pause)
         {
-            myAnim.SetBool("OnTheGround", onTheGround);
-
             if (Input.GetKeyDown(KeyCode.Space) && timeSpendBetweenAttack >= timeBetweenAttacks)
             {
                 myAnim.SetTrigger("Attack");
@@ -83,8 +83,17 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            myRigid.velocity = new Vector2(0, 0);
-            myAnim.SetFloat("Speed", Mathf.Abs(0));
+            if(!onTheGround)
+            {
+                myRigid.velocity = new Vector2(0, myRigid.velocity.y);
+                myAnim.SetFloat("Jump", myRigid.velocity.y);
+            } else
+            {
+                myRigid.velocity = new Vector2(0, 0);
+                myAnim.SetFloat("Jump", 0);
+                myAnim.SetFloat("Speed", Mathf.Abs(0));
+            }
+            
             if (Input.GetKeyDown(KeyCode.Return) && myInvent.gameObject.activeSelf)
             {
                 myInvent.Close();
