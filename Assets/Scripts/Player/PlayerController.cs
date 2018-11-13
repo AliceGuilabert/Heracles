@@ -10,17 +10,18 @@ public class PlayerController : MonoBehaviour
     public float timeBetweenAttacks;
     private float timeSpendBetweenAttack;
 
-    private Rigidbody2D myRigid;
+    public Rigidbody2D myRigid { get; set; }
 
     public Transform groundCheck;
     public float groundCheckRadius;
     public LayerMask whatIsGround;
     private bool onTheGround;
 
-    private Animator myAnim;
+    public Animator myAnim { get; set; }
 
     public Inventory myInvent;
     public bool pause { get; set; }
+    public bool manual { get; set; }
 
     private void Start()
     {
@@ -28,7 +29,7 @@ public class PlayerController : MonoBehaviour
         myAnim = GetComponent<Animator>();
         timeSpendBetweenAttack = timeBetweenAttacks;
         pause = false;
-
+        manual = false;
     }
 
     private void FixedUpdate()
@@ -39,6 +40,11 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         myAnim.SetBool("OnTheGround", onTheGround);
+
+        if(manual)
+        {
+            return;
+        }
 
         if (!pause)
         {

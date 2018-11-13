@@ -16,7 +16,7 @@ public class Goal {
 
     public virtual void Init()
     {
-        isActive = false;
+        isActive = true;
         GameObject.FindObjectOfType<QuestUI>().Goals.Add(this);
         GameObject.FindObjectOfType<QuestUI>().UpdateUI();
     }

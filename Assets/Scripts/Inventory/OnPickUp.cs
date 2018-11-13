@@ -8,9 +8,14 @@ public class OnPickUp : MonoBehaviour
     public Inventory myInvent;
     EnemyHealthManager myHealth;
     bool picked;
+    bool firstTrigger;
 
     public delegate void ItemPickEventHandler(Item item);
     public static event ItemPickEventHandler OnItemPicked;
+
+    public delegate void PickUpEventHandler(GameObject interactable);
+    public static event PickUpEventHandler OnThePickUpPlace;
+    public static event PickUpEventHandler ExitThePickUpPlace;
 
     private void Start()
     {
@@ -20,9 +25,29 @@ public class OnPickUp : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
+        if (collision.name.Equals("Player") && firstTrigger && !myHealth.alive && !picked)
+        {
+            if (OnThePickUpPlace != null)
+            {
+                OnThePickUpPlace(this.gameObject);
+                firstTrigger = false;
+            }
+        }
         if (collision.name.Equals("Player") && !myHealth.alive && Input.GetKeyDown(KeyCode.RightShift))
         {
             PickOnEnemy();
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.name.Equals("Player"))
+        {
+            if (ExitThePickUpPlace != null)
+            {
+                ExitThePickUpPlace(this.gameObject);
+                firstTrigger = true;
+            }
         }
     }
 
@@ -40,7 +65,7 @@ public class OnPickUp : MonoBehaviour
                 myInvent.Add(item);
 
             }
-            picked = true;
+            //picked = true;    --> A REACTIVER
         } else
         {
             //MESSAGE

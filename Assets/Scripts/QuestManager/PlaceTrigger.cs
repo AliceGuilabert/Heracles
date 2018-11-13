@@ -12,9 +12,7 @@ public class PlaceTrigger : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.name.Equals("Player")) {
-            if (OnThePlace != null)
-                OnThePlace(this);
+            if (OnThePlace != null) OnThePlace(this);
         }
     }
-
 }

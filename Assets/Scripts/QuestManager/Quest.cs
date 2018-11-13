@@ -12,7 +12,14 @@ public class Quest : MonoBehaviour {
 
     public void CheckGoals()
     {
-        Completed = Goals.All(g => g.Completed);
+        Completed = true;
+        foreach (Goal g in Goals)
+        {
+            if(g.isActive && !g.Completed)
+            {
+                Completed = false;
+            }
+        }
     }
 
     void GiveReward()
@@ -23,8 +30,5 @@ public class Quest : MonoBehaviour {
         }
     }
 
-    public virtual void AddGoal(int nb)
-    {
-
-    }
+    public virtual void AddGoal(int nb) {}
 }

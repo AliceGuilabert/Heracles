@@ -54,8 +54,14 @@ public class Hera : NPC
 
             case (1):
                 //myDialog.RunDialogue(3, name);
+                GameObject.Find("Grotte").GetComponent<Teleportation>().enable = true;
                 myQuest.AddGoal(1);
                 break;
+
+            case (2):
+                myQuest.AddGoal(2);
+                break;
+
         }
         Debug.Log("QuestAssign");
         

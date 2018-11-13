@@ -26,11 +26,15 @@ public class PointGoal : Goal
 
     void HotspotOn(PlaceTrigger place)
     {
+        if (!isActive) return;
+
         if (place.namePlace == this.PointName)
         {
             this.CurrentAmount++;
+
             Completed = true;
             Quest.CheckGoals();
+
             if (Quest.Completed)
             {
                 GameObject.FindObjectOfType<QuestUI>().Goals.Remove(this);
@@ -41,6 +45,7 @@ public class PointGoal : Goal
             }
             else
             {
+                this.CurrentAmount--;
                 //C'est pas bon
                 if (OnPlaceCheck != null) OnPlaceCheck(place.namePlace, 0);
                 Completed = false;

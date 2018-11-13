@@ -26,9 +26,18 @@ public class Travail1Quest : Quest
 
                 case (1):
                     Debug.Log("Newquete");
+                    Goals.ForEach(g => g.isActive = false);
                     Completed = false;
-                    Goals.Add(new PointGoal(this, "Here", "Entrer dans la grotte", false, 0, 1));
+                    Goals.Add(new PointGoal(this, "Grotte", "Entrer dans la grotte", false, 0, 1));
                     Goals[2].Init();
+                    break;
+
+                case (2):
+                    Debug.Log("Newquete2");
+                    Goals.ForEach(g => g.isActive = false);
+                    Completed = false;
+                    Goals.Add(new PointGoal(this, "ActionLionGrotte", "Explorer la grotte", false, 0, 1));
+                    Goals[3].Init();
                     break;
         }
     }

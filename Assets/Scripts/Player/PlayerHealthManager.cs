@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerHealthManager : MonoBehaviour {
 
     public int healthMax;
-    private float currentHealth;
+    public float currentHealth { get; set; }
    // private bool isAlive;
 
     SpriteRenderer mySprite;
@@ -71,7 +71,7 @@ public class PlayerHealthManager : MonoBehaviour {
         healthBar.fillAmount = currentHealth / healthMax;
     }
 
-    public void RemoveLife(int lifeToRemove)
+    public void RemoveLife(float lifeToRemove)
     {
         if(!isInvicible)
         {

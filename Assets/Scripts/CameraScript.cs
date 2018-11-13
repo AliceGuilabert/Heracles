@@ -34,7 +34,6 @@ public class CameraScript : MonoBehaviour {
         isParalax = true;
 
         offset = transform.position - player.transform.position;
-        Debug.Log(offset);
         previousCameraPosition = transform.position;
         parallaxScales = new float[backgrounds.Length];
 

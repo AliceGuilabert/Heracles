@@ -86,5 +86,27 @@ Okey, pas de gestes brusque, il s'agit de faire demi-tour lentement ...
         </DialogueOption>
       </Options>
     </DialogueNode>
+    <DialogueNode>
+      <NodeID>8</NodeID>
+      <Text>Okey donc la confrontation direct n'est pas possible ... Je vais devoir trouver une autre approche.
+      </Text>
+      <Options>
+        <DialogueOption>
+          <Text>Suite</Text>
+          <DestinationNodeID>9</DestinationNodeID>
+        </DialogueOption>
+      </Options>
+    </DialogueNode>
+    <DialogueNode>
+      <NodeID>9</NodeID>
+      <Text>Hum, lui tendre un piège peut être ? Il me faudrait pour cela un appat.
+      </Text>
+      <Options>
+        <DialogueOption>
+          <Text>Exit</Text>
+          <DestinationNodeID>-1</DestinationNodeID>
+        </DialogueOption>
+      </Options>
+    </DialogueNode>
   </Nodes>
 </Dialogue>

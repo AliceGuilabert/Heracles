@@ -30,7 +30,7 @@ public class otherDialogue : MonoBehaviour
         onDialogue = false;
 
         dia = Dialogue.LoadDialogue("Assets/" + DialogueDataFilePath);
-        dialogue_window = GameObject.Find("Infos");
+        dialogue_window = GameObject.Find("AutreDialogue");
 
         node_text = GameObject.Find("Text_node");
         Exit = GameObject.Find("Button_exit");
@@ -40,7 +40,7 @@ public class otherDialogue : MonoBehaviour
 
     public void RunDialogue(int nodeStart)
     {
-        StopCoroutine("run");
+        StopCoroutine("AnimateText");
         StartCoroutine(run(nodeStart));
     }
 
